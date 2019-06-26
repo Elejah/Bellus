@@ -1,0 +1,1395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MainDataSet" targetNamespace="http://tempuri.org/MainDataSet.xsd" xmlns:mstns="http://tempuri.org/MainDataSet.xsd" xmlns="http://tempuri.org/MainDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="-1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ARM_MRKConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ARM_MRKConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Bellus.Properties.Settings.GlobalReference.Default.ARM_MRKConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ARM_MRKConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ARM_MRKConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Bellus.Properties.Settings.GlobalReference.Default.ARM_MRKConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ARM_MRKConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ARM_MRKConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Bellus.Properties.Settings.GlobalReference.Default.ARM_MRKConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_EmployesTableAdapter" GeneratorDataComponentClassName="VW_EmployesTableAdapter" Name="VW_Employes" UserDataComponentName="VW_EmployesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.VW_Employes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Name, ID, Surname, Type_ID, Adress_ID, Email, WorkExperience_ID, Salary, StartDate, Description, Status_ID, TypeName, StatusID FROM dbo.VW_Employes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="Type_ID" DataSetColumn="Type_ID" />
+              <Mapping SourceColumn="Adress_ID" DataSetColumn="Adress_ID" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="WorkExperience_ID" DataSetColumn="WorkExperience_ID" />
+              <Mapping SourceColumn="Salary" DataSetColumn="Salary" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Status_ID" DataSetColumn="Status_ID" />
+              <Mapping SourceColumn="TypeName" DataSetColumn="TypeName" />
+              <Mapping SourceColumn="StatusID" DataSetColumn="StatusID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployesTableAdapter" GeneratorDataComponentClassName="EmployesTableAdapter" Name="Employes" UserDataComponentName="EmployesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Employes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Employes] WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@IsNull_Type_ID = 1 AND [Type_ID] IS NULL) OR ([Type_ID] = @Original_Type_ID)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Adress_ID = 1 AND [Adress_ID] IS NULL) OR ([Adress_ID] = @Original_Adress_ID)) AND ((@IsNull_WorkExperience_ID = 1 AND [WorkExperience_ID] IS NULL) OR ([WorkExperience_ID] = @Original_WorkExperience_ID)) AND ((@IsNull_Salary = 1 AND [Salary] IS NULL) OR ([Salary] = @Original_Salary)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Birthday = 1 AND [Birthday] IS NULL) OR ([Birthday] = @Original_Birthday)) AND ((@IsNull_Status_ID = 1 AND [Status_ID] IS NULL) OR ([Status_ID] = @Original_Status_ID)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Surname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Surname" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Type_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Type_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Adress_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Adress_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Adress_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Adress_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WorkExperience_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WorkExperience_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_WorkExperience_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WorkExperience_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Salary" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Salary" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Salary" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Salary" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StartDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_StartDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Birthday" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Birthday" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Employes] ([Name], [Surname], [Type_ID], [Email], [Adress_ID], [Photo], [WorkExperience_ID], [Salary], [StartDate], [Description], [Birthday], [Status_ID]) VALUES (@Name, @Surname, @Type_ID, @Email, @Adress_ID, @Photo, @WorkExperience_ID, @Salary, @StartDate, @Description, @Birthday, @Status_ID);
+SELECT ID, Name, Surname, Type_ID, Email, Adress_ID, Photo, WorkExperience_ID, Salary, StartDate, Description, Birthday, Status_ID FROM Employes WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Surname" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Type_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Adress_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Adress_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Photo" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Photo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@WorkExperience_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WorkExperience_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Salary" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Salary" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@StartDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Birthday" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Name, Surname, Type_ID, Email, Adress_ID, Photo, WorkExperience_ID, Salary, StartDate, Description,Birthday, Status_ID FROM dbo.Employes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Employes] SET [Name] = @Name, [Surname] = @Surname, [Type_ID] = @Type_ID, [Email] = @Email, [Adress_ID] = @Adress_ID, [Photo] = @Photo, [WorkExperience_ID] = @WorkExperience_ID, [Salary] = @Salary, [StartDate] = @StartDate, [Description] = @Description, [Birthday] = @Birthday, [Status_ID] = @Status_ID WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@IsNull_Type_ID = 1 AND [Type_ID] IS NULL) OR ([Type_ID] = @Original_Type_ID)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Adress_ID = 1 AND [Adress_ID] IS NULL) OR ([Adress_ID] = @Original_Adress_ID)) AND ((@IsNull_WorkExperience_ID = 1 AND [WorkExperience_ID] IS NULL) OR ([WorkExperience_ID] = @Original_WorkExperience_ID)) AND ((@IsNull_Salary = 1 AND [Salary] IS NULL) OR ([Salary] = @Original_Salary)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Birthday = 1 AND [Birthday] IS NULL) OR ([Birthday] = @Original_Birthday)) AND ((@IsNull_Status_ID = 1 AND [Status_ID] IS NULL) OR ([Status_ID] = @Original_Status_ID)));
+SELECT ID, Name, Surname, Type_ID, Email, Adress_ID, Photo, WorkExperience_ID, Salary, StartDate, Description, Birthday, Status_ID FROM Employes WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Surname" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Type_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Adress_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Adress_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Photo" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Photo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@WorkExperience_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WorkExperience_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Salary" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Salary" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@StartDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Birthday" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Surname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Surname" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Type_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Type_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Adress_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Adress_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Adress_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Adress_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WorkExperience_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WorkExperience_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_WorkExperience_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WorkExperience_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Salary" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Salary" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Salary" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Salary" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StartDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_StartDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Birthday" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Birthday" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="ARM_MRK.dbo.Employes" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="Type_ID" DataSetColumn="Type_ID" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Adress_ID" DataSetColumn="Adress_ID" />
+              <Mapping SourceColumn="Photo" DataSetColumn="Photo" />
+              <Mapping SourceColumn="WorkExperience_ID" DataSetColumn="WorkExperience_ID" />
+              <Mapping SourceColumn="Salary" DataSetColumn="Salary" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Birthday" DataSetColumn="Birthday" />
+              <Mapping SourceColumn="Status_ID" DataSetColumn="Status_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Employes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Adress_ID, Birthday, Description, Email, ID, Name, Photo, Salary, StartDate, Status_ID, Surname, Type_ID, WorkExperience_ID,Birthday FROM Employes WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.Employes" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TypesEmployesTableAdapter" GeneratorDataComponentClassName="TypesEmployesTableAdapter" Name="TypesEmployes" UserDataComponentName="TypesEmployesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.TypesEmployes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[TypesEmployes] WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[TypesEmployes] ([Name], [Description]) VALUES (@Name, @Description);
+SELECT ID, Name, Description FROM TypesEmployes WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Name, Description FROM dbo.TypesEmployes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[TypesEmployes] SET [Name] = @Name, [Description] = @Description WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)));
+SELECT ID, Name, Description FROM TypesEmployes WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.TypesEmployes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Name, Description FROM dbo.TypesEmployes
+WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.TypesEmployes" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.TypesEmployes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Name, Description FROM dbo.TypesEmployes
+WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.TypesEmployes" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AddressesTableAdapter" GeneratorDataComponentClassName="AddressesTableAdapter" Name="Addresses" UserDataComponentName="AddressesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Addresses" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Addresses] WHERE (([ID] = @Original_ID) AND ((@IsNull_House = 1 AND [House] IS NULL) OR ([House] = @Original_House)) AND ((@IsNull_Street = 1 AND [Street] IS NULL) OR ([Street] = @Original_Street)) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_House" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="House" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_House" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="House" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Street" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Street" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_City" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_City" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Addresses] ([House], [Street], [City], [Description]) VALUES (@House, @Street, @City, @Description);
+SELECT ID, House, Street, City, Description FROM Addresses WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@House" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="House" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Street" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@City" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, House, Street, City,  Description FROM dbo.Addresses</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Addresses] SET [House] = @House, [Street] = @Street, [City] = @City, [Description] = @Description WHERE (([ID] = @Original_ID) AND ((@IsNull_House = 1 AND [House] IS NULL) OR ([House] = @Original_House)) AND ((@IsNull_Street = 1 AND [Street] IS NULL) OR ([Street] = @Original_Street)) AND ((@IsNull_City = 1 AND [City] IS NULL) OR ([City] = @Original_City)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)));
+SELECT ID, House, Street, City, Description FROM Addresses WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@House" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="House" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Street" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@City" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_House" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="House" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_House" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="House" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Street" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Street" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Street" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_City" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_City" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="City" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="ARM_MRK.dbo.Addresses" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="House" DataSetColumn="House" />
+              <Mapping SourceColumn="Street" DataSetColumn="Street" />
+              <Mapping SourceColumn="City" DataSetColumn="City" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Addresses" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, House, Street, City,  Description FROM dbo.Addresses
+WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.Addresses" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TypesInventoryTableAdapter" GeneratorDataComponentClassName="TypesInventoryTableAdapter" Name="TypesInventory" UserDataComponentName="TypesInventoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.TypesInventory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[TypesInventory] WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[TypesInventory] ([Name], [Description]) VALUES (@Name, @Description);
+SELECT ID, Name, Description FROM TypesInventory WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Name, Description FROM dbo.TypesInventory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[TypesInventory] SET [Name] = @Name, [Description] = @Description WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)));
+SELECT ID, Name, Description FROM TypesInventory WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.TypesInventory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Name, Description FROM dbo.TypesInventory
+WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.TypesInventory" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InventoryTableAdapter" GeneratorDataComponentClassName="InventoryTableAdapter" Name="Inventory" UserDataComponentName="InventoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Inventory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Inventory] WHERE (([ID] = @Original_ID) AND ((@IsNull_DateOfBought = 1 AND [DateOfBought] IS NULL) OR ([DateOfBought] = @Original_DateOfBought)) AND ((@IsNull_Employe_ID = 1 AND [Employe_ID] IS NULL) OR ([Employe_ID] = @Original_Employe_ID)) AND ((@IsNull_InventoryNumber = 1 AND [InventoryNumber] IS NULL) OR ([InventoryNumber] = @Original_InventoryNumber)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_InventoryType_ID = 1 AND [InventoryType_ID] IS NULL) OR ([InventoryType_ID] = @Original_InventoryType_ID)) AND ((@IsNull_Status_ID = 1 AND [Status_ID] IS NULL) OR ([Status_ID] = @Original_Status_ID)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateOfBought" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateOfBought" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_DateOfBought" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateOfBought" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Employe_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employe_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Employe_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employe_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InventoryNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InventoryNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_InventoryNumber" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="InventoryNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InventoryType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InventoryType_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_InventoryType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InventoryType_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Inventory] ([DateOfBought], [Employe_ID], [InventoryNumber], [Description], [InventoryType_ID], [Status_ID], [Name]) VALUES (@DateOfBought, @Employe_ID, @InventoryNumber, @Description, @InventoryType_ID, @Status_ID, @Name);
+SELECT ID, DateOfBought, Employe_ID, InventoryNumber, Description, InventoryType_ID, Status_ID, Name FROM Inventory WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@DateOfBought" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateOfBought" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Employe_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employe_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@InventoryNumber" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="InventoryNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@InventoryType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InventoryType_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, DateOfBought, Employe_ID, InventoryNumber, Description, InventoryType_ID, Status_ID, Name FROM dbo.Inventory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Inventory] SET [DateOfBought] = @DateOfBought, [Employe_ID] = @Employe_ID, [InventoryNumber] = @InventoryNumber, [Description] = @Description, [InventoryType_ID] = @InventoryType_ID, [Status_ID] = @Status_ID, [Name] = @Name WHERE (([ID] = @Original_ID) AND ((@IsNull_DateOfBought = 1 AND [DateOfBought] IS NULL) OR ([DateOfBought] = @Original_DateOfBought)) AND ((@IsNull_Employe_ID = 1 AND [Employe_ID] IS NULL) OR ([Employe_ID] = @Original_Employe_ID)) AND ((@IsNull_InventoryNumber = 1 AND [InventoryNumber] IS NULL) OR ([InventoryNumber] = @Original_InventoryNumber)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_InventoryType_ID = 1 AND [InventoryType_ID] IS NULL) OR ([InventoryType_ID] = @Original_InventoryType_ID)) AND ((@IsNull_Status_ID = 1 AND [Status_ID] IS NULL) OR ([Status_ID] = @Original_Status_ID)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)));
+SELECT ID, DateOfBought, Employe_ID, InventoryNumber, Description, InventoryType_ID, Status_ID, Name FROM Inventory WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@DateOfBought" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateOfBought" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Employe_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employe_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@InventoryNumber" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="InventoryNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@InventoryType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InventoryType_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateOfBought" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateOfBought" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_DateOfBought" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateOfBought" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Employe_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employe_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Employe_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employe_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InventoryNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InventoryNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_InventoryNumber" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="InventoryNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InventoryType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InventoryType_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_InventoryType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InventoryType_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="DateOfBought" DataSetColumn="DateOfBought" />
+              <Mapping SourceColumn="Employe_ID" DataSetColumn="Employe_ID" />
+              <Mapping SourceColumn="InventoryNumber" DataSetColumn="InventoryNumber" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="InventoryType_ID" DataSetColumn="InventoryType_ID" />
+              <Mapping SourceColumn="Status_ID" DataSetColumn="Status_ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Inventory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, DateOfBought, Employe_ID, InventoryNumber, Description, InventoryType_ID, Status_ID, Name FROM dbo.Inventory
+WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.Inventory" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_InventoryTableAdapter" GeneratorDataComponentClassName="VW_InventoryTableAdapter" Name="VW_Inventory" UserDataComponentName="VW_InventoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.VW_Inventory" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DateOfBought,ID, Name, Description, EmployeName, Surname, Email, EmployeType,InventoryName, InventoryNumber,Status_ID FROM dbo.VW_Inventory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DateOfBought" DataSetColumn="DateOfBought" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="EmployeName" DataSetColumn="EmployeName" />
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="EmployeType" DataSetColumn="EmployeType" />
+              <Mapping SourceColumn="InventoryNumber" DataSetColumn="InventoryNumber" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="InventoryName" DataSetColumn="InventoryName" />
+              <Mapping SourceColumn="Status_ID" DataSetColumn="Status_ID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_RoomsTableAdapter" GeneratorDataComponentClassName="VW_RoomsTableAdapter" Name="VW_Rooms" UserDataComponentName="VW_RoomsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.VW_Rooms" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID,Number, EmployeMain_ID, RoomType_ID, Description,Status_ID FROM dbo.VW_Rooms</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Number" DataSetColumn="Number" />
+              <Mapping SourceColumn="EmployeMain_ID" DataSetColumn="EmployeMain_ID" />
+              <Mapping SourceColumn="RoomType_ID" DataSetColumn="RoomType_ID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Status_ID" DataSetColumn="Status_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.VW_Rooms" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID,Number, EmployeMain_ID, RoomType_ID, Description,Status_ID FROM dbo.VW_Rooms
+WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.VW_Rooms" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RoomsTableAdapter" GeneratorDataComponentClassName="RoomsTableAdapter" Name="Rooms" UserDataComponentName="RoomsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Rooms" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Rooms] WHERE (([ID] = @Original_ID) AND ((@IsNull_Number = 1 AND [Number] IS NULL) OR ([Number] = @Original_Number)) AND ((@IsNull_EmployeMain_ID = 1 AND [EmployeMain_ID] IS NULL) OR ([EmployeMain_ID] = @Original_EmployeMain_ID)) AND ((@IsNull_RoomType_ID = 1 AND [RoomType_ID] IS NULL) OR ([RoomType_ID] = @Original_RoomType_ID)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Status_ID = 1 AND [Status_ID] IS NULL) OR ([Status_ID] = @Original_Status_ID)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Number" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Number" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EmployeMain_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EmployeMain_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_EmployeMain_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EmployeMain_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RoomType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RoomType_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_RoomType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RoomType_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Rooms] ([Number], [EmployeMain_ID], [RoomType_ID], [Description], [Status_ID]) VALUES (@Number, @EmployeMain_ID, @RoomType_ID, @Description, @Status_ID);
+SELECT ID, Number, EmployeMain_ID, RoomType_ID, Description, Status_ID FROM Rooms WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Number" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@EmployeMain_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EmployeMain_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@RoomType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RoomType_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Number, EmployeMain_ID, RoomType_ID, Description, Status_ID FROM dbo.Rooms</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Rooms] SET [Number] = @Number, [EmployeMain_ID] = @EmployeMain_ID, [RoomType_ID] = @RoomType_ID, [Description] = @Description, [Status_ID] = @Status_ID WHERE (([ID] = @Original_ID) AND ((@IsNull_Number = 1 AND [Number] IS NULL) OR ([Number] = @Original_Number)) AND ((@IsNull_EmployeMain_ID = 1 AND [EmployeMain_ID] IS NULL) OR ([EmployeMain_ID] = @Original_EmployeMain_ID)) AND ((@IsNull_RoomType_ID = 1 AND [RoomType_ID] IS NULL) OR ([RoomType_ID] = @Original_RoomType_ID)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Status_ID = 1 AND [Status_ID] IS NULL) OR ([Status_ID] = @Original_Status_ID)));
+SELECT ID, Number, EmployeMain_ID, RoomType_ID, Description, Status_ID FROM Rooms WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Number" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@EmployeMain_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EmployeMain_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@RoomType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RoomType_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Number" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Number" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EmployeMain_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EmployeMain_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_EmployeMain_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EmployeMain_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RoomType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RoomType_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_RoomType_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RoomType_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Number" DataSetColumn="Number" />
+              <Mapping SourceColumn="EmployeMain_ID" DataSetColumn="EmployeMain_ID" />
+              <Mapping SourceColumn="RoomType_ID" DataSetColumn="RoomType_ID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Status_ID" DataSetColumn="Status_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Rooms" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Number, EmployeMain_ID, RoomType_ID, Description, Status_ID FROM dbo.Rooms
+WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.Rooms" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TypesRoomsTableAdapter" GeneratorDataComponentClassName="TypesRoomsTableAdapter" Name="TypesRooms" UserDataComponentName="TypesRoomsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.TypesRooms" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[TypesRooms] WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[TypesRooms] ([Name], [Description]) VALUES (@Name, @Description);
+SELECT ID, Name, Description FROM TypesRooms WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Name, Description FROM dbo.TypesRooms</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[TypesRooms] SET [Name] = @Name, [Description] = @Description WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)));
+SELECT ID, Name, Description FROM TypesRooms WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.TypesRooms" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Name, Description FROM dbo.TypesRooms
+WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.TypesRooms" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_RoomsEmployesTableAdapter" GeneratorDataComponentClassName="VW_RoomsEmployesTableAdapter" Name="VW_RoomsEmployes" UserDataComponentName="VW_RoomsEmployesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.VW_RoomsEmployes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Number, Name, Surname, Employee_ID, Room_ID FROM dbo.VW_RoomsEmployes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Number" DataSetColumn="Number" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="Employee_ID" DataSetColumn="Employee_ID" />
+              <Mapping SourceColumn="Room_ID" DataSetColumn="Room_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.VW_RoomsEmployes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Number, Name, Surname, Employee_ID, Room_ID FROM dbo.VW_RoomsEmployes
+WHERE (Room_ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="id" ColumnName="Room_ID" DataSourceName="ARM_MRK.dbo.VW_RoomsEmployes" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Room_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_SoftTableAdapter" GeneratorDataComponentClassName="VW_SoftTableAdapter" Name="VW_Soft" UserDataComponentName="VW_SoftTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.VW_Soft" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID,Name, SoftName,Surname,EmployeTypeName,DateInstall,Status_ID FROM dbo.VW_Soft</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="SoftName" DataSetColumn="SoftName" />
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="EmployeTypeName" DataSetColumn="EmployeTypeName" />
+              <Mapping SourceColumn="DateInstall" DataSetColumn="DateInstall" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Status_ID" DataSetColumn="Status_ID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SoftsTableAdapter" GeneratorDataComponentClassName="SoftsTableAdapter" Name="Softs" UserDataComponentName="SoftsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Softs" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Softs] WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Employes_ID = 1 AND [Employes_ID] IS NULL) OR ([Employes_ID] = @Original_Employes_ID)) AND ((@IsNull_DateInstall = 1 AND [DateInstall] IS NULL) OR ([DateInstall] = @Original_DateInstall)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Status_ID = 1 AND [Status_ID] IS NULL) OR ([Status_ID] = @Original_Status_ID)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Employes_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employes_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Employes_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employes_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateInstall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateInstall" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_DateInstall" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateInstall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Softs] ([Name], [Employes_ID], [DateInstall], [Description], [Status_ID]) VALUES (@Name, @Employes_ID, @DateInstall, @Description, @Status_ID);
+SELECT ID, Name, Employes_ID, DateInstall, Description, Status_ID FROM Softs WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Employes_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employes_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@DateInstall" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateInstall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Name, Employes_ID, DateInstall, Description, Status_ID FROM dbo.Softs</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Softs] SET [Name] = @Name, [Employes_ID] = @Employes_ID, [DateInstall] = @DateInstall, [Description] = @Description, [Status_ID] = @Status_ID WHERE (([ID] = @Original_ID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Employes_ID = 1 AND [Employes_ID] IS NULL) OR ([Employes_ID] = @Original_Employes_ID)) AND ((@IsNull_DateInstall = 1 AND [DateInstall] IS NULL) OR ([DateInstall] = @Original_DateInstall)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Status_ID = 1 AND [Status_ID] IS NULL) OR ([Status_ID] = @Original_Status_ID)));
+SELECT ID, Name, Employes_ID, DateInstall, Description, Status_ID FROM Softs WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Employes_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employes_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@DateInstall" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateInstall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Employes_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employes_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Employes_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employes_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateInstall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateInstall" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_DateInstall" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateInstall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Status_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Employes_ID" DataSetColumn="Employes_ID" />
+              <Mapping SourceColumn="DateInstall" DataSetColumn="DateInstall" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Status_ID" DataSetColumn="Status_ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ARM_MRKConnectionString (Settings)" DbObjectName="ARM_MRK.dbo.Softs" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Name, Employes_ID, DateInstall, Description, Status_ID FROM dbo.Softs
+WHERE (ID = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="ID" DataSourceName="ARM_MRK.dbo.Softs" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Room_EmployeeTableAdapter" GeneratorDataComponentClassName="Room_EmployeeTableAdapter" Name="Room_Employee" UserDataComponentName="Room_EmployeeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ARM_MRKConnectionString1 (Settings)" DbObjectName="ARM_MRK.dbo.Room_Employee" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Room_Employee] ([Employee_ID], [Room_ID]) VALUES (@Employee_ID, @Room_ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Employee_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employee_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Room_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Room_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Employee_ID, Room_ID FROM dbo.Room_Employee</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Employee_ID" DataSetColumn="Employee_ID" />
+              <Mapping SourceColumn="Room_ID" DataSetColumn="Room_ID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MainDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MainDataSet" msprop:Generator_UserDSName="MainDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VW_Employes" msprop:Generator_TableClassName="VW_EmployesDataTable" msprop:Generator_TableVarName="tableVW_Employes" msprop:Generator_RowChangedName="VW_EmployesRowChanged" msprop:Generator_TablePropName="VW_Employes" msprop:Generator_RowDeletingName="VW_EmployesRowDeleting" msprop:Generator_RowChangingName="VW_EmployesRowChanging" msprop:Generator_RowEvHandlerName="VW_EmployesRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_EmployesRowDeleted" msprop:Generator_RowClassName="VW_EmployesRow" msprop:Generator_UserTableName="VW_Employes" msprop:Generator_RowEvArgName="VW_EmployesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Type_ID" msprop:Generator_ColumnVarNameInTable="columnType_ID" msprop:Generator_ColumnPropNameInRow="Type_ID" msprop:Generator_ColumnPropNameInTable="Type_IDColumn" msprop:Generator_UserColumnName="Type_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Adress_ID" msprop:Generator_ColumnVarNameInTable="columnAdress_ID" msprop:Generator_ColumnPropNameInRow="Adress_ID" msprop:Generator_ColumnPropNameInTable="Adress_IDColumn" msprop:Generator_UserColumnName="Adress_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkExperience_ID" msprop:Generator_ColumnVarNameInTable="columnWorkExperience_ID" msprop:Generator_ColumnPropNameInRow="WorkExperience_ID" msprop:Generator_ColumnPropNameInTable="WorkExperience_IDColumn" msprop:Generator_UserColumnName="WorkExperience_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Salary" msprop:Generator_ColumnVarNameInTable="columnSalary" msprop:Generator_ColumnPropNameInRow="Salary" msprop:Generator_ColumnPropNameInTable="SalaryColumn" msprop:Generator_UserColumnName="Salary" type="xs:int" minOccurs="0" />
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status_ID" msprop:Generator_ColumnVarNameInTable="columnStatus_ID" msprop:Generator_ColumnPropNameInRow="Status_ID" msprop:Generator_ColumnPropNameInTable="Status_IDColumn" msprop:Generator_UserColumnName="Status_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="TypeName" msprop:Generator_ColumnVarNameInTable="columnTypeName" msprop:Generator_ColumnPropNameInRow="TypeName" msprop:Generator_ColumnPropNameInTable="TypeNameColumn" msprop:Generator_UserColumnName="TypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusID" msprop:Generator_ColumnVarNameInTable="columnStatusID" msprop:Generator_ColumnPropNameInRow="StatusID" msprop:Generator_ColumnPropNameInTable="StatusIDColumn" msprop:Generator_UserColumnName="StatusID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Employes" msprop:Generator_TableClassName="EmployesDataTable" msprop:Generator_TableVarName="tableEmployes" msprop:Generator_TablePropName="Employes" msprop:Generator_RowDeletingName="EmployesRowDeleting" msprop:Generator_RowChangingName="EmployesRowChanging" msprop:Generator_RowEvHandlerName="EmployesRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployesRowDeleted" msprop:Generator_UserTableName="Employes" msprop:Generator_RowChangedName="EmployesRowChanged" msprop:Generator_RowEvArgName="EmployesRowChangeEvent" msprop:Generator_RowClassName="EmployesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Type_ID" msprop:Generator_ColumnVarNameInTable="columnType_ID" msprop:Generator_ColumnPropNameInRow="Type_ID" msprop:Generator_ColumnPropNameInTable="Type_IDColumn" msprop:Generator_UserColumnName="Type_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Adress_ID" msprop:Generator_ColumnVarNameInTable="columnAdress_ID" msprop:Generator_ColumnPropNameInRow="Adress_ID" msprop:Generator_ColumnPropNameInTable="Adress_IDColumn" msprop:Generator_UserColumnName="Adress_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Photo" msprop:Generator_ColumnVarNameInTable="columnPhoto" msprop:Generator_ColumnPropNameInRow="Photo" msprop:Generator_ColumnPropNameInTable="PhotoColumn" msprop:Generator_UserColumnName="Photo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="WorkExperience_ID" msprop:Generator_ColumnVarNameInTable="columnWorkExperience_ID" msprop:Generator_ColumnPropNameInRow="WorkExperience_ID" msprop:Generator_ColumnPropNameInTable="WorkExperience_IDColumn" msprop:Generator_UserColumnName="WorkExperience_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Salary" msprop:Generator_ColumnVarNameInTable="columnSalary" msprop:Generator_ColumnPropNameInRow="Salary" msprop:Generator_ColumnPropNameInTable="SalaryColumn" msprop:Generator_UserColumnName="Salary" type="xs:int" minOccurs="0" />
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Birthday" msprop:Generator_ColumnVarNameInTable="columnBirthday" msprop:Generator_ColumnPropNameInRow="Birthday" msprop:Generator_ColumnPropNameInTable="BirthdayColumn" msprop:Generator_UserColumnName="Birthday" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Status_ID" msprop:Generator_ColumnVarNameInTable="columnStatus_ID" msprop:Generator_ColumnPropNameInRow="Status_ID" msprop:Generator_ColumnPropNameInTable="Status_IDColumn" msprop:Generator_UserColumnName="Status_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TypesEmployes" msprop:Generator_TableClassName="TypesEmployesDataTable" msprop:Generator_TableVarName="tableTypesEmployes" msprop:Generator_TablePropName="TypesEmployes" msprop:Generator_RowDeletingName="TypesEmployesRowDeleting" msprop:Generator_RowChangingName="TypesEmployesRowChanging" msprop:Generator_RowEvHandlerName="TypesEmployesRowChangeEventHandler" msprop:Generator_RowDeletedName="TypesEmployesRowDeleted" msprop:Generator_UserTableName="TypesEmployes" msprop:Generator_RowChangedName="TypesEmployesRowChanged" msprop:Generator_RowEvArgName="TypesEmployesRowChangeEvent" msprop:Generator_RowClassName="TypesEmployesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Addresses" msprop:Generator_TableClassName="AddressesDataTable" msprop:Generator_TableVarName="tableAddresses" msprop:Generator_RowChangedName="AddressesRowChanged" msprop:Generator_TablePropName="Addresses" msprop:Generator_RowDeletingName="AddressesRowDeleting" msprop:Generator_RowChangingName="AddressesRowChanging" msprop:Generator_RowEvHandlerName="AddressesRowChangeEventHandler" msprop:Generator_RowDeletedName="AddressesRowDeleted" msprop:Generator_RowClassName="AddressesRow" msprop:Generator_UserTableName="Addresses" msprop:Generator_RowEvArgName="AddressesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="House" msprop:Generator_ColumnVarNameInTable="columnHouse" msprop:Generator_ColumnPropNameInRow="House" msprop:Generator_ColumnPropNameInTable="HouseColumn" msprop:Generator_UserColumnName="House" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Street" msprop:Generator_ColumnVarNameInTable="columnStreet" msprop:Generator_ColumnPropNameInRow="Street" msprop:Generator_ColumnPropNameInTable="StreetColumn" msprop:Generator_UserColumnName="Street" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TypesInventory" msprop:Generator_TableClassName="TypesInventoryDataTable" msprop:Generator_TableVarName="tableTypesInventory" msprop:Generator_TablePropName="TypesInventory" msprop:Generator_RowDeletingName="TypesInventoryRowDeleting" msprop:Generator_RowChangingName="TypesInventoryRowChanging" msprop:Generator_RowEvHandlerName="TypesInventoryRowChangeEventHandler" msprop:Generator_RowDeletedName="TypesInventoryRowDeleted" msprop:Generator_UserTableName="TypesInventory" msprop:Generator_RowChangedName="TypesInventoryRowChanged" msprop:Generator_RowEvArgName="TypesInventoryRowChangeEvent" msprop:Generator_RowClassName="TypesInventoryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Inventory" msprop:Generator_TableClassName="InventoryDataTable" msprop:Generator_TableVarName="tableInventory" msprop:Generator_RowChangedName="InventoryRowChanged" msprop:Generator_TablePropName="Inventory" msprop:Generator_RowDeletingName="InventoryRowDeleting" msprop:Generator_RowChangingName="InventoryRowChanging" msprop:Generator_RowEvHandlerName="InventoryRowChangeEventHandler" msprop:Generator_RowDeletedName="InventoryRowDeleted" msprop:Generator_RowClassName="InventoryRow" msprop:Generator_UserTableName="Inventory" msprop:Generator_RowEvArgName="InventoryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="DateOfBought" msprop:Generator_ColumnVarNameInTable="columnDateOfBought" msprop:Generator_ColumnPropNameInRow="DateOfBought" msprop:Generator_ColumnPropNameInTable="DateOfBoughtColumn" msprop:Generator_UserColumnName="DateOfBought" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Employe_ID" msprop:Generator_ColumnVarNameInTable="columnEmploye_ID" msprop:Generator_ColumnPropNameInRow="Employe_ID" msprop:Generator_ColumnPropNameInTable="Employe_IDColumn" msprop:Generator_UserColumnName="Employe_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="InventoryNumber" msprop:Generator_ColumnVarNameInTable="columnInventoryNumber" msprop:Generator_ColumnPropNameInRow="InventoryNumber" msprop:Generator_ColumnPropNameInTable="InventoryNumberColumn" msprop:Generator_UserColumnName="InventoryNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InventoryType_ID" msprop:Generator_ColumnVarNameInTable="columnInventoryType_ID" msprop:Generator_ColumnPropNameInRow="InventoryType_ID" msprop:Generator_ColumnPropNameInTable="InventoryType_IDColumn" msprop:Generator_UserColumnName="InventoryType_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Status_ID" msprop:Generator_ColumnVarNameInTable="columnStatus_ID" msprop:Generator_ColumnPropNameInRow="Status_ID" msprop:Generator_ColumnPropNameInTable="Status_IDColumn" msprop:Generator_UserColumnName="Status_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VW_Inventory" msprop:Generator_TableClassName="VW_InventoryDataTable" msprop:Generator_TableVarName="tableVW_Inventory" msprop:Generator_RowChangedName="VW_InventoryRowChanged" msprop:Generator_TablePropName="VW_Inventory" msprop:Generator_RowDeletingName="VW_InventoryRowDeleting" msprop:Generator_RowChangingName="VW_InventoryRowChanging" msprop:Generator_RowEvHandlerName="VW_InventoryRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_InventoryRowDeleted" msprop:Generator_RowClassName="VW_InventoryRow" msprop:Generator_UserTableName="VW_Inventory" msprop:Generator_RowEvArgName="VW_InventoryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateOfBought" msprop:Generator_ColumnVarNameInTable="columnDateOfBought" msprop:Generator_ColumnPropNameInRow="DateOfBought" msprop:Generator_ColumnPropNameInTable="DateOfBoughtColumn" msprop:Generator_UserColumnName="DateOfBought" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeName" msprop:Generator_ColumnVarNameInTable="columnEmployeName" msprop:Generator_ColumnPropNameInRow="EmployeName" msprop:Generator_ColumnPropNameInTable="EmployeNameColumn" msprop:Generator_UserColumnName="EmployeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeType" msprop:Generator_ColumnVarNameInTable="columnEmployeType" msprop:Generator_ColumnPropNameInRow="EmployeType" msprop:Generator_ColumnPropNameInTable="EmployeTypeColumn" msprop:Generator_UserColumnName="EmployeType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InventoryNumber" msprop:Generator_ColumnVarNameInTable="columnInventoryNumber" msprop:Generator_ColumnPropNameInRow="InventoryNumber" msprop:Generator_ColumnPropNameInTable="InventoryNumberColumn" msprop:Generator_UserColumnName="InventoryNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="InventoryName" msprop:Generator_ColumnVarNameInTable="columnInventoryName" msprop:Generator_ColumnPropNameInRow="InventoryName" msprop:Generator_ColumnPropNameInTable="InventoryNameColumn" msprop:Generator_UserColumnName="InventoryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status_ID" msprop:Generator_ColumnVarNameInTable="columnStatus_ID" msprop:Generator_ColumnPropNameInRow="Status_ID" msprop:Generator_ColumnPropNameInTable="Status_IDColumn" msprop:Generator_UserColumnName="Status_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VW_Rooms" msprop:Generator_TableClassName="VW_RoomsDataTable" msprop:Generator_TableVarName="tableVW_Rooms" msprop:Generator_RowChangedName="VW_RoomsRowChanged" msprop:Generator_TablePropName="VW_Rooms" msprop:Generator_RowDeletingName="VW_RoomsRowDeleting" msprop:Generator_RowChangingName="VW_RoomsRowChanging" msprop:Generator_RowEvHandlerName="VW_RoomsRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_RoomsRowDeleted" msprop:Generator_RowClassName="VW_RoomsRow" msprop:Generator_UserTableName="VW_Rooms" msprop:Generator_RowEvArgName="VW_RoomsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Number" msprop:Generator_ColumnVarNameInTable="columnNumber" msprop:Generator_ColumnPropNameInRow="Number" msprop:Generator_ColumnPropNameInTable="NumberColumn" msprop:Generator_UserColumnName="Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeMain_ID" msprop:Generator_ColumnVarNameInTable="columnEmployeMain_ID" msprop:Generator_ColumnPropNameInRow="EmployeMain_ID" msprop:Generator_ColumnPropNameInTable="EmployeMain_IDColumn" msprop:Generator_UserColumnName="EmployeMain_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="RoomType_ID" msprop:Generator_ColumnVarNameInTable="columnRoomType_ID" msprop:Generator_ColumnPropNameInRow="RoomType_ID" msprop:Generator_ColumnPropNameInTable="RoomType_IDColumn" msprop:Generator_UserColumnName="RoomType_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Status_ID" msprop:Generator_ColumnVarNameInTable="columnStatus_ID" msprop:Generator_ColumnPropNameInRow="Status_ID" msprop:Generator_ColumnPropNameInTable="Status_IDColumn" msprop:Generator_UserColumnName="Status_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TypesRooms" msprop:Generator_TableClassName="TypesRoomsDataTable" msprop:Generator_TableVarName="tableTypesRooms" msprop:Generator_RowChangedName="TypesRoomsRowChanged" msprop:Generator_TablePropName="TypesRooms" msprop:Generator_RowDeletingName="TypesRoomsRowDeleting" msprop:Generator_RowChangingName="TypesRoomsRowChanging" msprop:Generator_RowEvHandlerName="TypesRoomsRowChangeEventHandler" msprop:Generator_RowDeletedName="TypesRoomsRowDeleted" msprop:Generator_RowClassName="TypesRoomsRow" msprop:Generator_UserTableName="TypesRooms" msprop:Generator_RowEvArgName="TypesRoomsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VW_RoomsEmployes" msprop:Generator_TableClassName="VW_RoomsEmployesDataTable" msprop:Generator_TableVarName="tableVW_RoomsEmployes" msprop:Generator_RowChangedName="VW_RoomsEmployesRowChanged" msprop:Generator_TablePropName="VW_RoomsEmployes" msprop:Generator_RowDeletingName="VW_RoomsEmployesRowDeleting" msprop:Generator_RowChangingName="VW_RoomsEmployesRowChanging" msprop:Generator_RowEvHandlerName="VW_RoomsEmployesRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_RoomsEmployesRowDeleted" msprop:Generator_RowClassName="VW_RoomsEmployesRow" msprop:Generator_UserTableName="VW_RoomsEmployes" msprop:Generator_RowEvArgName="VW_RoomsEmployesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Number" msprop:Generator_ColumnVarNameInTable="columnNumber" msprop:Generator_ColumnPropNameInRow="Number" msprop:Generator_ColumnPropNameInTable="NumberColumn" msprop:Generator_UserColumnName="Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Employee_ID" msprop:Generator_ColumnVarNameInTable="columnEmployee_ID" msprop:Generator_ColumnPropNameInRow="Employee_ID" msprop:Generator_ColumnPropNameInTable="Employee_IDColumn" msprop:Generator_UserColumnName="Employee_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Room_ID" msprop:Generator_ColumnVarNameInTable="columnRoom_ID" msprop:Generator_ColumnPropNameInRow="Room_ID" msprop:Generator_ColumnPropNameInTable="Room_IDColumn" msprop:Generator_UserColumnName="Room_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VW_Soft" msprop:Generator_TableClassName="VW_SoftDataTable" msprop:Generator_TableVarName="tableVW_Soft" msprop:Generator_TablePropName="VW_Soft" msprop:Generator_RowDeletingName="VW_SoftRowDeleting" msprop:Generator_RowChangingName="VW_SoftRowChanging" msprop:Generator_RowEvHandlerName="VW_SoftRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_SoftRowDeleted" msprop:Generator_UserTableName="VW_Soft" msprop:Generator_RowChangedName="VW_SoftRowChanged" msprop:Generator_RowEvArgName="VW_SoftRowChangeEvent" msprop:Generator_RowClassName="VW_SoftRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SoftName" msprop:Generator_ColumnVarNameInTable="columnSoftName" msprop:Generator_ColumnPropNameInRow="SoftName" msprop:Generator_ColumnPropNameInTable="SoftNameColumn" msprop:Generator_UserColumnName="SoftName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeTypeName" msprop:Generator_ColumnVarNameInTable="columnEmployeTypeName" msprop:Generator_ColumnPropNameInRow="EmployeTypeName" msprop:Generator_ColumnPropNameInTable="EmployeTypeNameColumn" msprop:Generator_UserColumnName="EmployeTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateInstall" msprop:Generator_ColumnVarNameInTable="columnDateInstall" msprop:Generator_ColumnPropNameInRow="DateInstall" msprop:Generator_ColumnPropNameInTable="DateInstallColumn" msprop:Generator_UserColumnName="DateInstall" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Status_ID" msprop:Generator_ColumnVarNameInTable="columnStatus_ID" msprop:Generator_ColumnPropNameInRow="Status_ID" msprop:Generator_ColumnPropNameInTable="Status_IDColumn" msprop:Generator_UserColumnName="Status_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Softs" msprop:Generator_TableClassName="SoftsDataTable" msprop:Generator_TableVarName="tableSofts" msprop:Generator_RowChangedName="SoftsRowChanged" msprop:Generator_TablePropName="Softs" msprop:Generator_RowDeletingName="SoftsRowDeleting" msprop:Generator_RowChangingName="SoftsRowChanging" msprop:Generator_RowEvHandlerName="SoftsRowChangeEventHandler" msprop:Generator_RowDeletedName="SoftsRowDeleted" msprop:Generator_RowClassName="SoftsRow" msprop:Generator_UserTableName="Softs" msprop:Generator_RowEvArgName="SoftsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Employes_ID" msprop:Generator_ColumnVarNameInTable="columnEmployes_ID" msprop:Generator_ColumnPropNameInRow="Employes_ID" msprop:Generator_ColumnPropNameInTable="Employes_IDColumn" msprop:Generator_UserColumnName="Employes_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="DateInstall" msprop:Generator_ColumnVarNameInTable="columnDateInstall" msprop:Generator_ColumnPropNameInRow="DateInstall" msprop:Generator_ColumnPropNameInTable="DateInstallColumn" msprop:Generator_UserColumnName="DateInstall" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status_ID" msprop:Generator_ColumnVarNameInTable="columnStatus_ID" msprop:Generator_ColumnPropNameInRow="Status_ID" msprop:Generator_ColumnPropNameInTable="Status_IDColumn" msprop:Generator_UserColumnName="Status_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Room_Employee" msprop:Generator_TableClassName="Room_EmployeeDataTable" msprop:Generator_TableVarName="tableRoom_Employee" msprop:Generator_TablePropName="Room_Employee" msprop:Generator_RowDeletingName="Room_EmployeeRowDeleting" msprop:Generator_RowChangingName="Room_EmployeeRowChanging" msprop:Generator_RowEvHandlerName="Room_EmployeeRowChangeEventHandler" msprop:Generator_RowDeletedName="Room_EmployeeRowDeleted" msprop:Generator_UserTableName="Room_Employee" msprop:Generator_RowChangedName="Room_EmployeeRowChanged" msprop:Generator_RowEvArgName="Room_EmployeeRowChangeEvent" msprop:Generator_RowClassName="Room_EmployeeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Employee_ID" msprop:Generator_ColumnVarNameInTable="columnEmployee_ID" msprop:Generator_ColumnPropNameInRow="Employee_ID" msprop:Generator_ColumnPropNameInTable="Employee_IDColumn" msprop:Generator_UserColumnName="Employee_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Room_ID" msprop:Generator_ColumnVarNameInTable="columnRoom_ID" msprop:Generator_ColumnPropNameInRow="Room_ID" msprop:Generator_ColumnPropNameInTable="Room_IDColumn" msprop:Generator_UserColumnName="Room_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Rooms" msprop:Generator_TableClassName="RoomsDataTable" msprop:Generator_TableVarName="tableRooms" msprop:Generator_RowChangedName="RoomsRowChanged" msprop:Generator_TablePropName="Rooms" msprop:Generator_RowDeletingName="RoomsRowDeleting" msprop:Generator_RowChangingName="RoomsRowChanging" msprop:Generator_RowEvHandlerName="RoomsRowChangeEventHandler" msprop:Generator_RowDeletedName="RoomsRowDeleted" msprop:Generator_RowClassName="RoomsRow" msprop:Generator_UserTableName="Rooms" msprop:Generator_RowEvArgName="RoomsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Number" msprop:Generator_ColumnVarNameInTable="columnNumber" msprop:Generator_ColumnPropNameInRow="Number" msprop:Generator_ColumnPropNameInTable="NumberColumn" msprop:Generator_UserColumnName="Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeMain_ID" msprop:Generator_ColumnVarNameInTable="columnEmployeMain_ID" msprop:Generator_ColumnPropNameInRow="EmployeMain_ID" msprop:Generator_ColumnPropNameInTable="EmployeMain_IDColumn" msprop:Generator_UserColumnName="EmployeMain_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="RoomType_ID" msprop:Generator_ColumnVarNameInTable="columnRoomType_ID" msprop:Generator_ColumnPropNameInRow="RoomType_ID" msprop:Generator_ColumnPropNameInTable="RoomType_IDColumn" msprop:Generator_UserColumnName="RoomType_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status_ID" msprop:Generator_ColumnVarNameInTable="columnStatus_ID" msprop:Generator_ColumnPropNameInRow="Status_ID" msprop:Generator_ColumnPropNameInTable="Status_IDColumn" msprop:Generator_UserColumnName="Status_ID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VW_Employes" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Employes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Employes" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TypesEmployes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TypesEmployes" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Addresses_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Addresses" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TypesInventory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TypesInventory" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Inventory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Inventory" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="VW_Inventory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VW_Inventory" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="VW_Rooms_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VW_Rooms" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TypesRooms_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TypesRooms" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="VW_Soft_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VW_Soft" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Softs_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Softs" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Rooms_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Rooms" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_Employes_TypesEmployes" msdata:parent="TypesEmployes" msdata:child="Employes" msdata:parentkey="ID" msdata:childkey="Type_ID" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_UserRelationName="FK_Employes_TypesEmployes" msprop:Generator_RelationVarName="relationFK_Employes_TypesEmployes" msprop:Generator_UserParentTable="TypesEmployes" msprop:Generator_ParentPropName="TypesEmployesRow" />
+      <msdata:Relationship name="FK_Employes_Addresses" msdata:parent="Addresses" msdata:child="Employes" msdata:parentkey="ID" msdata:childkey="Adress_ID" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_UserRelationName="FK_Employes_Addresses" msprop:Generator_ParentPropName="AddressesRow" msprop:Generator_RelationVarName="relationFK_Employes_Addresses" msprop:Generator_UserParentTable="Addresses" />
+      <msdata:Relationship name="FK_Inventory_Employes" msdata:parent="Employes" msdata:child="Inventory" msdata:parentkey="ID" msdata:childkey="Employe_ID" msprop:Generator_UserChildTable="Inventory" msprop:Generator_ChildPropName="GetInventoryRows" msprop:Generator_UserRelationName="FK_Inventory_Employes" msprop:Generator_RelationVarName="relationFK_Inventory_Employes" msprop:Generator_UserParentTable="Employes" msprop:Generator_ParentPropName="EmployesRow" />
+      <msdata:Relationship name="FK_Inventory_TypesInventory" msdata:parent="TypesInventory" msdata:child="Inventory" msdata:parentkey="ID" msdata:childkey="InventoryType_ID" msprop:Generator_UserChildTable="Inventory" msprop:Generator_ChildPropName="GetInventoryRows" msprop:Generator_UserRelationName="FK_Inventory_TypesInventory" msprop:Generator_RelationVarName="relationFK_Inventory_TypesInventory" msprop:Generator_UserParentTable="TypesInventory" msprop:Generator_ParentPropName="TypesInventoryRow" />
+      <msdata:Relationship name="FK_Softs_Employes" msdata:parent="Employes" msdata:child="Softs" msdata:parentkey="ID" msdata:childkey="Employes_ID" msprop:Generator_UserChildTable="Softs" msprop:Generator_ChildPropName="GetSoftsRows" msprop:Generator_UserRelationName="FK_Softs_Employes" msprop:Generator_RelationVarName="relationFK_Softs_Employes" msprop:Generator_UserParentTable="Employes" msprop:Generator_ParentPropName="EmployesRow" />
+      <msdata:Relationship name="Employes_Room_Employee" msdata:parent="Employes" msdata:child="Room_Employee" msdata:parentkey="ID" msdata:childkey="Employee_ID" msprop:Generator_UserChildTable="Room_Employee" msprop:Generator_ChildPropName="GetRoom_EmployeeRows" msprop:Generator_UserRelationName="Employes_Room_Employee" msprop:Generator_RelationVarName="relationEmployes_Room_Employee" msprop:Generator_UserParentTable="Employes" msprop:Generator_ParentPropName="EmployesRow" />
+      <msdata:Relationship name="VW_Rooms_Room_Employee" msdata:parent="VW_Rooms" msdata:child="Room_Employee" msdata:parentkey="ID" msdata:childkey="Room_ID" msprop:Generator_UserChildTable="Room_Employee" msprop:Generator_ChildPropName="GetRoom_EmployeeRows" msprop:Generator_UserRelationName="VW_Rooms_Room_Employee" msprop:Generator_RelationVarName="relationVW_Rooms_Room_Employee" msprop:Generator_UserParentTable="VW_Rooms" msprop:Generator_ParentPropName="VW_RoomsRow" />
+      <msdata:Relationship name="FK_Rooms_TypesRooms" msdata:parent="TypesRooms" msdata:child="Rooms" msdata:parentkey="ID" msdata:childkey="RoomType_ID" msprop:Generator_UserChildTable="Rooms" msprop:Generator_ChildPropName="GetRoomsRows" msprop:Generator_UserRelationName="FK_Rooms_TypesRooms" msprop:Generator_ParentPropName="TypesRoomsRow" msprop:Generator_RelationVarName="relationFK_Rooms_TypesRooms" msprop:Generator_UserParentTable="TypesRooms" />
+      <msdata:Relationship name="FK_Rooms_Employes" msdata:parent="Employes" msdata:child="Rooms" msdata:parentkey="ID" msdata:childkey="EmployeMain_ID" msprop:Generator_UserChildTable="Rooms" msprop:Generator_ChildPropName="GetRoomsRows" msprop:Generator_UserRelationName="FK_Rooms_Employes" msprop:Generator_RelationVarName="relationFK_Rooms_Employes" msprop:Generator_UserParentTable="Employes" msprop:Generator_ParentPropName="EmployesRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
