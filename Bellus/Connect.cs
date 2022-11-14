@@ -40,5 +40,15 @@ namespace Bellus
             DialogResult = DialogResult.OK;
             Close();
         }
+
+        private void Connect_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

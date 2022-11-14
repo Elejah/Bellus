@@ -55,7 +55,7 @@
             // 
             // textEditIP
             // 
-            this.textEditIP.EditValue = "172.23.201.242";
+            this.textEditIP.EditValue = "DESKTOP-Q7U9ENT\\MSSQLSERVERDPM";
             this.textEditIP.Location = new System.Drawing.Point(125, 12);
             this.textEditIP.Name = "textEditIP";
             this.textEditIP.Size = new System.Drawing.Size(157, 20);
@@ -63,7 +63,7 @@
             // 
             // textEditDB
             // 
-            this.textEditDB.EditValue = "ARM_MRK";
+            this.textEditDB.EditValue = "CRM_BELLUS";
             this.textEditDB.Location = new System.Drawing.Point(125, 47);
             this.textEditDB.Name = "textEditDB";
             this.textEditDB.Size = new System.Drawing.Size(157, 20);
@@ -71,7 +71,7 @@
             // 
             // textEditUser
             // 
-            this.textEditUser.EditValue = "sa111";
+            this.textEditUser.EditValue = "sa";
             this.textEditUser.Location = new System.Drawing.Point(125, 88);
             this.textEditUser.Name = "textEditUser";
             this.textEditUser.Size = new System.Drawing.Size(157, 20);
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 189);
+            this.ClientSize = new System.Drawing.Size(303, 192);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
@@ -145,6 +145,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Подключение";
+            this.Load += new System.EventHandler(this.Connect_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEditIP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditDB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditUser.Properties)).EndInit();

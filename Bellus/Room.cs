@@ -41,6 +41,8 @@ namespace Bellus
 
         private void Room_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mainDataSet.VW_Employes' table. You can move, or remove it, as needed.
+            this.vW_EmployesTableAdapter.Fill(this.mainDataSet.VW_Employes);
 
         }
         private void Fill()
@@ -99,6 +101,11 @@ namespace Bellus
                     Fill(RoomID);
                 }
             }
+        }
+
+        private void employesBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

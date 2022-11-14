@@ -43,8 +43,12 @@
     <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +64,12 @@
     </Compile>
     <Compile Include="AboutProgramm.Designer.cs">
       <DependentUpon>AboutProgramm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackUpModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackUpModule.Designer.cs">
+      <DependentUpon>BackUpModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Connect.cs">
       <SubType>Form</SubType>
@@ -90,6 +100,12 @@
     </Compile>
     <Compile Include="InventoryAdd.Designer.cs">
       <DependentUpon>InventoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogData.Designer.cs">
+      <DependentUpon>LogData.cs</DependentUpon>
     </Compile>
     <Compile Include="MainDataSet.cs">
       <DependentUpon>MainDataSet.xsd</DependentUpon>
@@ -131,6 +147,13 @@
     <Compile Include="Soft.Designer.cs">
       <DependentUpon>Soft.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TabSearchFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabSearchFrom.Designer.cs">
+      <DependentUpon>TabSearchFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="TypesForms\AdressesAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +175,9 @@
     <EmbeddedResource Include="AboutProgramm.resx">
       <DependentUpon>AboutProgramm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BackUpModule.resx">
+      <DependentUpon>BackUpModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Connect.resx">
       <DependentUpon>Connect.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryAdd.resx">
       <DependentUpon>InventoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogData.resx">
+      <DependentUpon>LogData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -192,6 +221,9 @@
     <EmbeddedResource Include="Soft.resx">
       <DependentUpon>Soft.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TabSearchFrom.resx">
+      <DependentUpon>TabSearchFrom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TypesForms\AdressesAdd.resx">
       <DependentUpon>AdressesAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +245,7 @@
     <None Include="MainDataSet.xss">
       <DependentUpon>MainDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -225,6 +258,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="4.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

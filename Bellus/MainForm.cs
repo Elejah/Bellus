@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
 namespace Bellus
 {
     public partial class MainForm : Form
@@ -301,7 +300,13 @@ namespace Bellus
 
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            MessageBox.Show("It will create, soon");
+            using (var about = new TabSearchFrom())
+            {
+                if (about.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
         }
 
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -448,6 +453,28 @@ namespace Bellus
                     {
                         Fill();
                     }
+                }
+            }
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (var backUp = new BackUpModule())
+            {
+                if (backUp.ShowDialog() == DialogResult.OK)
+                {
+                    Fill();
+                }
+            }
+        }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (var logData = new LogData())
+            {
+                if (logData.ShowDialog() == DialogResult.OK)
+                {
+                    Fill();
                 }
             }
         }

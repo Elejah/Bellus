@@ -37,15 +37,15 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(12, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(312, 24);
+            this.labelControl1.Size = new System.Drawing.Size(251, 24);
             this.labelControl1.TabIndex = 99;
-            this.labelControl1.Text = "Designed in MRK assembled by me";
+            this.labelControl1.Text = "Designed & assembled by me";
             // 
             // AboutProgramm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 52);
+            this.ClientSize = new System.Drawing.Size(274, 52);
             this.Controls.Add(this.labelControl1);
             this.Name = "AboutProgramm";
             this.ShowIcon = false;

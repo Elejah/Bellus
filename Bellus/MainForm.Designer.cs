@@ -55,6 +55,8 @@
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -310,9 +312,9 @@
             this.navigationPage4,
             this.navigationPage5,
             this.navigationPage6});
-            this.navigationPane.RegularSize = new System.Drawing.Size(1200, 380);
+            this.navigationPane.RegularSize = new System.Drawing.Size(1330, 444);
             this.navigationPane.SelectedPage = this.navigationPage1;
-            this.navigationPane.Size = new System.Drawing.Size(1200, 380);
+            this.navigationPane.Size = new System.Drawing.Size(1330, 444);
             this.navigationPane.TabIndex = 0;
             this.navigationPane.Text = "navigationPane";
             // 
@@ -321,7 +323,7 @@
             this.navigationPage1.Caption = "Сотрудники";
             this.navigationPage1.Controls.Add(this.gridControlEmployes);
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(1091, 320);
+            this.navigationPage1.Size = new System.Drawing.Size(1221, 384);
             // 
             // gridControlEmployes
             // 
@@ -334,7 +336,7 @@
             this.gridControlEmployes.Name = "gridControlEmployes";
             this.gridControlEmployes.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1});
-            this.gridControlEmployes.Size = new System.Drawing.Size(1091, 320);
+            this.gridControlEmployes.Size = new System.Drawing.Size(1221, 384);
             this.gridControlEmployes.TabIndex = 0;
             this.gridControlEmployes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -453,8 +455,10 @@
             this.barButtonItem7,
             this.barButtonItem8,
             this.barButtonItem9,
-            this.barButtonItem10});
-            this.barManager1.MaxItemId = 17;
+            this.barButtonItem10,
+            this.barButtonItem11,
+            this.barButtonItem12});
+            this.barManager1.MaxItemId = 19;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
             this.barManager1.StatusBar = this.bar3;
@@ -474,7 +478,9 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem7, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem8, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem9, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem10, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem10, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem11, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem12, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.Text = "Сервис";
             // 
             // barButtonItem2
@@ -552,6 +558,22 @@
             this.barButtonItem10.Name = "barButtonItem10";
             this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
+            // barButtonItem11
+            // 
+            this.barButtonItem11.Caption = "Бэкап";
+            this.barButtonItem11.Id = 17;
+            this.barButtonItem11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.Image")));
+            this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+            // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Caption = "Логи";
+            this.barButtonItem12.Id = 18;
+            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
+            this.barButtonItem12.Name = "barButtonItem12";
+            this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
+            // 
             // bar3
             // 
             this.bar3.BarName = "Строка состояния";
@@ -570,15 +592,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1200, 47);
+            this.barDockControlTop.Size = new System.Drawing.Size(1330, 47);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 427);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 491);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1200, 23);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1330, 23);
             // 
             // barDockControlLeft
             // 
@@ -586,15 +608,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 380);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 444);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1200, 47);
+            this.barDockControlRight.Location = new System.Drawing.Point(1330, 47);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 380);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 444);
             // 
             // barButtonItem3
             // 
@@ -1773,7 +1795,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 450);
+            this.ClientSize = new System.Drawing.Size(1330, 514);
             this.Controls.Add(this.navigationPane);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -2053,6 +2075,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colStreet;
         private DevExpress.XtraGrid.Columns.GridColumn colCity;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
     }
 }
 

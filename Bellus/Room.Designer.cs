@@ -47,7 +47,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.employesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vWEmployesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,6 +57,7 @@
             this.typesEmployesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.employesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employesTableAdapter = new Bellus.MainDataSetTableAdapters.EmployesTableAdapter();
             this.textEdit3 = new DevExpress.XtraEditors.GridLookUpEdit();
             this.typesRoomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -64,6 +65,7 @@
             this.typesRoomsTableAdapter = new Bellus.MainDataSetTableAdapters.TypesRoomsTableAdapter();
             this.typesEmployesTableAdapter = new Bellus.MainDataSetTableAdapters.TypesEmployesTableAdapter();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.vW_EmployesTableAdapter = new Bellus.MainDataSetTableAdapters.VW_EmployesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainDataSet)).BeginInit();
@@ -71,11 +73,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.vWRoomsEmployesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWEmployesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesEmployesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesRoomsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -117,6 +120,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.EmployesTableAdapter = null;
             this.tableAdapterManager.InventoryTableAdapter = null;
+            this.tableAdapterManager.Room_EmployeeTableAdapter = null;
             this.tableAdapterManager.RoomsTableAdapter = this.roomsTableAdapter;
             this.tableAdapterManager.SoftsTableAdapter = null;
             this.tableAdapterManager.TypesEmployesTableAdapter = null;
@@ -218,7 +222,7 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit1.Properties.DataSource = this.employesBindingSource;
+            this.textEdit1.Properties.DataSource = this.vWEmployesBindingSource;
             this.textEdit1.Properties.DisplayMember = "Name";
             this.textEdit1.Properties.NullText = "";
             this.textEdit1.Properties.PopupView = this.gridLookUpEdit1View;
@@ -228,10 +232,10 @@
             this.textEdit1.Size = new System.Drawing.Size(376, 20);
             this.textEdit1.TabIndex = 104;
             // 
-            // employesBindingSource
+            // vWEmployesBindingSource
             // 
-            this.employesBindingSource.DataMember = "Employes";
-            this.employesBindingSource.DataSource = this.mainDataSet;
+            this.vWEmployesBindingSource.DataMember = "VW_Employes";
+            this.vWEmployesBindingSource.DataSource = this.mainDataSet;
             // 
             // gridLookUpEdit1View
             // 
@@ -309,6 +313,12 @@
             this.colEmail.Visible = true;
             this.colEmail.VisibleIndex = 4;
             // 
+            // employesBindingSource
+            // 
+            this.employesBindingSource.DataMember = "Employes";
+            this.employesBindingSource.DataSource = this.mainDataSet;
+            this.employesBindingSource.CurrentChanged += new System.EventHandler(this.employesBindingSource_CurrentChanged);
+            // 
             // employesTableAdapter
             // 
             this.employesTableAdapter.ClearBeforeFill = true;
@@ -357,6 +367,10 @@
             this.simpleButton2.Text = "Добавить Пользоваеля";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
+            // vW_EmployesTableAdapter
+            // 
+            this.vW_EmployesTableAdapter.ClearBeforeFill = true;
+            // 
             // Room
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,11 +398,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.vWRoomsEmployesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWEmployesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesEmployesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesRoomsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -434,5 +449,7 @@
         private System.Windows.Forms.BindingSource typesEmployesBindingSource;
         private MainDataSetTableAdapters.TypesEmployesTableAdapter typesEmployesTableAdapter;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.BindingSource vWEmployesBindingSource;
+        private MainDataSetTableAdapters.VW_EmployesTableAdapter vW_EmployesTableAdapter;
     }
 }
